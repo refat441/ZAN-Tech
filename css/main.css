@@ -1,0 +1,85 @@
+/* side nav start */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:rgba(115, 201, 241, 0.792);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 4px 4px 4px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #070707;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* side nav end  */
+
+/* 1st nav css  */
+.navbutton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 3px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 15px;
+    font-weight: bold;
+    margin: 2px;
+    
+  }
+
+  .navbutton1 {
+    background-color: transparent; 
+  }
+  
+  .navbutton1:hover {
+    background-color: #46bae1;
+  }
+
+  /* 1st nav css end */
+
+  /*  card  */
+  .card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.8s;
+  }
+  .card {
+    margin-top: 20px;
+  }
+  .bold{
+    font-weight: bold;
+  }
+  .btn-size{
+    width: 70px;
+  }
+  /* card end  */
