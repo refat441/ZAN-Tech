@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/payment_gateway.css" />
+    <script src="js/payment_gateway.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Multi-Stap Form</title>
+  </head>
+  <body>
+    <h2 >Shopping Details</h2>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-sm-8">
+
+          <div class="row justify-content-start">
+            <div class="col-6">
+              <b>PRODUCT</b>
+            </div>
+            <div class="col-2">
+              <b>PRICE</b>
+            </div>
+            <div class="col-2">
+              <b>QUANTITY</b>
+              </div>
+            <div class="col-2">
+              <b>SUBTOTAL</b>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="row justify-content-start">
+            <div class="col-6 mt-4">
+              <b>PRODUCT details in here with img and price </b>
+            </div>
+            <div class="col-2 mt-4">
+              <b>100</b>
+          </div>
+
+           <!-- product quantity counter end -->
+            <div class="col-2">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text down count-span" onClick='decreaseCount(event, this)'>-</span>
+                </div>
+                <input type="text" class="form-control count text-center" value="1">
+                <div class="input-group-append">
+                  <span class="input-group-text up count-span" onClick='increaseCount(event, this)'>+</span>
+                </div>
+              </div>
+            </div>
+          <!-- product quantity counter end -->
+          
+            <div class="col-2 mt-4">
+              <b>100 bdt</b>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-sm-4">
+           <!-- multi stap form start -->
+          <form action="#" class="form" style="border-radius: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            <h3 class="text-center">Shoping Chart</h3>
+            <!-- Progress bar -->
+            <div class="progressbar">
+              <div class="progress" id="progress"></div>
+              
+              <div class="progress-step progress-step-active" data-title="Shopping"></div>
+              <div class="progress-step" data-title="Checkout"></div>
+              <div class="progress-step" data-title="Details"></div>
+              <div class="progress-step" data-title="Password"></div>
+            </div>
+      
+            <!-- Steps -->
+            <div class="form-step form-step-active">
+
+ <div class="row">
+              <div class="col-6">
+                <b>Subtotal</b>
+              </div>
+              <div class="col-6 float-start">
+                <b class="float-end">300 bdt</b>
+              </div>
+            </div>
+            
+            <div class="row  mt-3">
+              <div class="col-6">
+                <b>Shipping</b>
+              </div>
+              <div class="col-6">
+                <select id="disabledSelect" class="form-select">
+                  <option>Dhaka</option>
+                  <option>Chittagong</option>
+                  <option>Khulna</option>
+                  <option>Mymensingh</option>
+                  <option>Rajshahi</option>
+                  <option>Sylhet</option>
+                  <option>Barisal</option>
+                </select>
+              </div>
+              <div class="col-6">
+
+              </div>
+              <div class="col-6 mt-3">
+                <input type="password" id="inputPassword6" class="form-control" placeholder="City">
+              </div>
+              <div class="col-6">
+                
+              </div>
+              <div class="col-6 mt-3">
+                <input type="password" id="inputPassword6" class="form-control" placeholder="Postcode/ZIP">
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-6">
+                
+              </div>
+              <div class="col-6" style="margin-top: 8px;">
+                <button type="button" class="btn btn-outline-info float-end">Info</button>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <p>
+                  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample-1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    bkash
+                  </a>
+                  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample-2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    rocket
+                  </a>
+                </p>
+                <div class="collapse" id="collapseExample-1">
+                  bkash
+                </div>
+                <div class="collapse" id="collapseExample-2">
+                  rocket
+                </div>
+              </div>
+              <div class="col">
+                Column
+              </div>
+              <div class="col">
+                Column
+              </div>
+            </div>
+
+
+
+              <div class="">
+                <a href="#" class="costom-btn  btn-next width-50 ml-auto">Next</a>
+              </div>
+            </div>
+            
+            <div class="form-step">
+              <div class="input-group">
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" id="phone" />
+              </div>
+              <div class="input-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" />
+              </div>
+              <div class="btns-group">
+                <a href="#" class="costom-btn  btn-prev">Previous</a>
+                <a href="#" class="costom-btn  btn-next">Next</a>
+              </div>
+            </div>
+      
+            <div class="form-step">
+              <div class="input-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" name="dob" id="dob" />
+              </div>
+              <div class="input-group">
+                <label for="ID">National ID</label>
+                <input type="number" name="ID" id="ID" />
+              </div>
+              <div class="btns-group">
+                <a href="#" class="costom-btn  btn-prev">Previous</a>
+                <a href="#" class="costom-btn  btn-next">Next</a>
+              </div>
+            </div>
+      
+            <div class="form-step">
+              <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" />
+              </div>
+              <div class="input-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  id="confirmPassword"
+                />
+              </div>
+              <div class="btns-group">
+                <a href="#" class="costom-btn  btn-prev">Previous</a>
+                <input type="submit" value="Submit" class="costom-btn " />
+              </div>
+            </div>
+      
+          </form>
+           <!-- multi stap form end -->
+        </div>
+
+      </div>
+    </div>
+    
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</html>
